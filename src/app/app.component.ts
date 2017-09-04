@@ -10,10 +10,5 @@ export class AppComponent {
   title = 'app';
 
   constructor(public _ps: PeliculasService){
-    // this._ps.getPopulares()
-    //   .subscribe(data =>console.log(data));
-    // this._ps.buscarPelicula("wall-e")
-    //   .subscribe(data => console.log(data));
-
   }
 }

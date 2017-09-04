@@ -36,13 +36,13 @@ export class PeliculasService {
   }
 
   getValoradas(){
-    let url:string = `${this.urlMovieedb}/discover/movie/?certification_country=US&certification=R&sort_by=vote_average.desc&api_key${this.apikey}&language=es&callback=JSONP_CALLBACK`;
+    let url:string = `${this.urlMovieedb}/discover/movie/?certification_country=US&certification=R&sort_by=vote_average.desc&api_key=${this.apikey}&language=es&callback=JSONP_CALLBACK`;
     return this.jsonp.get(url)
       .map(res => res.json().results);
   }
 
   getPopularesKids(){
-    let url:string = `${this.urlMovieedb}/discover/movie?certification_country=US&certification.lte=G&sort_by=popularity.desc&api_key${this.apikey}&language=es&callback=JSONP_CALLBACK`;
+    let url:string = `${this.urlMovieedb}/discover/movie?certification_country=US&certification.lte=G&sort_by=popularity.desc&api_key=${this.apikey}&language=es&callback=JSONP_CALLBACK`;
     return this.jsonp.get(url)
       .map(res => res.json().results);
   }
@@ -51,6 +51,12 @@ export class PeliculasService {
     let url:string = `${ this.urlMovieedb }/search/movie?query=${peli}&sort_by=popularity.desc&api_key=${this.apikey}&language=es&callback=JSONP_CALLBACK`;
     return this.jsonp.get(url)
       .map(res => res.json().results);
+  }
+
+  getPelicula(id:string){
+    let url:string = `${this.urlMovieedb}/movie/${id}?api_key=${this.apikey}&language=es&callback=JSONP_CALLBACK`;
+    return this.jsonp.get(url)
+      .map(res => res.json());
   }
 
   // getImageUrl(idImg:string):string{

@@ -35,7 +35,6 @@ export class HomeComponent implements OnInit {
   obtenerCartelera(){
     this._ps.getCarteleras()
       .subscribe(data =>{
-        console.log(data);
         this.cartelera = data;
       })
   }
@@ -43,7 +42,6 @@ export class HomeComponent implements OnInit {
   obtenerPopularesKids(){
     this._ps.getPopularesKids()
       .subscribe(data =>{
-        console.log(data);
         this.popularesKids = data;
       })
   }
