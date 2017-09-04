@@ -8,18 +8,25 @@ import { AppComponent } from './app.component';
 //Servicios
 import { PeliculasService } from './services/peliculas.service';
 
+//Pipes
+import { PeliculaImagenPipe } from './pipes/pelicula-imagen.pipe';
 //Rutas
 import { APP_ROUTING } from './app.routes';
+
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { SearchComponent } from './components/search/search.component';
+import { GaleriaComponent } from './components/home/galeria.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    SearchComponent
+    SearchComponent,
+    PeliculaImagenPipe,
+    GaleriaComponent
   ],
   imports: [
     BrowserModule,

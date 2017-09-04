@@ -7,44 +7,15 @@
 
 <div class="container">
   <br>
-  <div class="row">
-    <h1>Cartelera</h1>
-    <hr>
 
-    <div class="row">
-      <div class="col-sm-6">
-        <div class="row">
-          <div class="col-md-12 div-pic-1"
-                [ngStyle]="'background-image': 'url(_ps.getImageUrl(peliculas.poster_path))'">
-          </div>
-        </div>
+  <app-galeria [peliculas]="cartelera| slice:0:6"
+                titulo="Peliculas en cartelera"></app-galeria>
+  <app-galeria [peliculas]="populares| slice:0:6"
+                titulo="Peliculas populares"></app-galeria>
+  <app-galeria [peliculas]="popularesKids| slice:0:6"
+                titulo="Peliculas populares de niños"></app-galeria>
+  <!-- <app-galeria [peliculas]="valoradas| slice:0:6"
+                titulo="Peliculas mas valoradas"></app-galeria> -->
 
-        <div class="row">
-          <div class="col-sm-6 div-pic-2"
-            [ngStyle]="'background-image': 'url(_ps.getImageUrl(peliculas.poster_path))'">
-          </div>
-          <div class="col-sm-6 div-pic-2"
-            [ngStyle]="'background-image': 'url(_ps.getImageUrl(peliculas.poster_path))'">
-          </div>
-        </div>
-      </div>
 
-      <div class="col-sm-6">
-        <div class="row">
-          <div class="col-sm-6 div-pic-2"
-            [ngStyle]="'background-image': 'url(_ps.getImageUrl(peliculas.poster_path))'">
-          </div>
-          <div class="col-sm-6 div-pic-2"
-            [ngStyle]="'background-image': 'url(_ps.getImageUrl(peliculas.poster_path))'">
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-12 div-pic-1"
-                [ngStyle]="'background-image': 'url(_ps.getImageUrl(peliculas.poster_path))'">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
