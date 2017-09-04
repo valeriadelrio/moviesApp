@@ -11,6 +11,7 @@ export class PeliculasService {
 
   private urlImage:string =  "http://image.tmdb.org/t/p/w300"; //poster_path - backdrop_path 300 es resolucion image
 
+  private peliculas:any[]=[];
   constructor( private jsonp: Jsonp) { }
 
 
